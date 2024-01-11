@@ -7,6 +7,7 @@ import projection6 from '@/../public/shoots/projections/projection6.png'
 import projection7 from '@/../public/shoots/projections/projection7.png'
 import projection8 from '@/../public/shoots/projections/projection8.png'
 import Image from 'next/image'
+import Section from './(components)/section'
 export default function Home() {
   return (
     <main className="">
@@ -26,14 +27,14 @@ export default function Home() {
           <Image fill className='rounded-sm relative object-cover' src={projection1} alt={''} />
         </section>
       </section>
-      <section className=' mt-2my-4 min-w-full max-h-screen min-h-screen leading-none
+      <Section className=' mt-5 my-4 min-w-full max-h-screen min-h-screen leading-none
       flex justify-center justify-items-center '>
         <h2 className='justify-items-start items-center uppercase font-extrabold flex text-8xl'>
           lumine
-          <span className='px-4'><Image className='  rounded-sm aspect-auto h-96 w-auto object-contain' src={projection4} alt={''} /></span>
+          <span className='px-4'><Image className='  rounded-sm aspect-auto h-[40rem] w-auto object-contain' src={projection4} alt={''} /></span>
           scence</h2>
 
-      </section>
+      </Section>
       <section className=' min-w-full max-h-screen min-h-screen leading-none
       grid grid-cols-3 grid-rows-3'>
         <Image className='p-5 rounded-sm aspect-auto col-span-1 row-span-1 w-auto object-contain' src={projection7} alt={''} />
