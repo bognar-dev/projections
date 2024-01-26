@@ -16,9 +16,24 @@ export default buildConfig({
   admin: {
     bundler: webpackBundler(),
     webpack(config) {
+      
       config.module = {
         rules: [
-          { test: /\.js$/, include: /node_modules/, loader: 'license-loader' }
+          { test: /\.js$/, include: /node_modules/, loader: 'license-loader' },
+              {
+                test: /\.md$/,
+                use: [
+                  
+                  {
+                    loader: "markdown-loader",
+                    options: {
+                      // Pass options to marked
+                      // See https://marked.js.org/using_advanced#options
+                    },
+                  },
+                ],
+              },
+           
         ]
       };
       return config;
